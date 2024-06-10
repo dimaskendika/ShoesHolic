@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css"/>
+    <script>
+    popup.addEventListener("click",function () {
+        popup.classList.add("show");
+    }
+);
+
+buy.addEventListener(
+    "click",
+    function () {
+    popup.classList.remove(
+            "show"
+        );
+    }
+);
+window.addEventListener(
+    "click",
+    function (event) {
+        if (event.target ==popup) {
+            myPopup.classList.remove(
+                "show"
+            );
+        }
+    }
+);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+</head>
+<body>
+
+    <header class="header">
+      
+        <a href="#" class="logo">Shoes <span> Holic</span></a>
+
+        <nav class="navbar">
+            <a href="index.html"class="active">Home</a>
+            <a href="brand.html">Brands</a>
+            <a href="products.html">Products</a>
+            <a href="articles.html">Articles</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <div class="product-box">
+        <div class="p-img-container">
+            <div class="p-img">
+                <a href="#">
+                    <img src="AUDACITY-II_Black-White_4_800x.webp" class="p-img-front" alt="Front"/>
+                    <img src="Audacity_BlackWhite_1_800x.webp" class="p-img-back" alt="Front"/>
+                </a>
+            </div>
+        </div>
+
+        <div class="p-box-text">
+            <div class="product-category">
+                <span>Sneakers</span>
+            </div>
+            <a href="#" class="product-title">
+                Audacity-II Black-White | NAH Project
+            </a>
+            <div class="price-buy">
+                <span class="p-price">Rp. 350.000</span>
+                <button id="popup" class="p-btn" >Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+            <img src="Audacity_BlackWhite_1_800x.webp" class="popup-img" alt="Front"/>
+            <div class="popup-text">
+                <h2>Audacity-II Black-White | NAH Project</h2>
+                <p>Rp. 350.000</p>
+            </div>
+            </div>
+            <button id="buy" >BUY</button>
+            <button id="close">Close</button>
+        </div>
+
+           
+    </div>
+</body>
+</html>
